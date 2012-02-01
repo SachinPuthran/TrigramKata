@@ -1,0 +1,11 @@
+DESIGN DECISIONS:
+
+1. Started out with TrigramParser which would take in a String and return a 
+   HashMap with first 2 words of a trigram as the key and the third word 
+   adding to a list of values for the key.
+2. Added a utility method to the parser which would return a list of 3 word trigrams.
+3. Next was TrigramGenerator this would take the trigram map built from
+   TrigramParser and would generate the new sentence. 
+4. Lookup the keys of the TrigramMap against the word pair that is sent in.
+   Get a random word from it's value in the trigramMap and append it to the new sentence,
+   Continue till the last two words exist as a key in the map.
